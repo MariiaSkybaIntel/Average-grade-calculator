@@ -1,4 +1,4 @@
-Author: Mariia Skyba
+Author: mindskai27
 Date: February 28th, 2019
 Description: Average grade calculator. 
 Average is calculated automatically when input is received,
