@@ -1,0 +1,338 @@
+<!--Author: Mariia Skyba
+Date: February 28th, 2019
+Description: Average grade calculator. 
+Average is calculated automatically when input is received,
+however it can be also calculated using button elow the table;
+If assignment is unsubmitted - change color cell to yellow;
+If average<40% - change cell color to red;
+If any non-digit character is entered in editable cells - disregards input;
+The second table calculated information on the assignments due.
+JSFiddle link: https://jsfiddle.net/mind_skai/9wvm0tkf/
+-->
+
+
+<table id = "Grades", style="width:100%">
+  <tr>
+
+    <th id = "h"> Name</th>
+    <th id = "h"> ID</th>  
+    <th id=hd >Assignment1</th>
+    <th id=hd >Assignment2</th>
+    <th id=hd >Assignment3</th>
+    <th id=hd >Assignment4</th>
+    <th id=hd >Assignment5</th>
+    <th id=hd >Final Grade</th>
+
+
+  </tr>
+    <tr>
+        <td id="n", contenteditable='false'>Cory Fox</td>
+        <td id="n", contenteditable='false'>1000</td>
+        <td id="c1"contenteditable='true'>-</td>
+        <td contenteditable='true'>-</td>
+        <td contenteditable='true'>-</td>
+        <td contenteditable='true'>-</td>
+        <td contenteditable='true'>-</td>
+        <td>-</td>
+  </tr>
+    <tr>
+        <td id="n">Jack Hansen</td>
+        <td id="n">1001</td>
+        <td contenteditable='true'>-</td>
+        <td contenteditable='true'>-</td>
+        <td contenteditable='true'>-</td>
+        <td contenteditable='true'>-</td>
+        <td contenteditable='true'>-</td>
+        <td>-</td>
+         
+  </tr>
+  
+  <tr>
+        <td id="n">Eve Jackson</td>
+        <td id="n">1002</td>
+        <td contenteditable='true'>-</td>
+        <td contenteditable='true'>-</td>
+        <td contenteditable='true'>-</td>
+        <td contenteditable='true'>-</td>
+        <td contenteditable='true'>-</td>
+        <td>-</td>
+  </tr>
+  
+  <tr>
+        <td id="n">John McGoran</td>
+        <td id="n">1003</td>
+        <td contenteditable='true'>-</td>
+        <td contenteditable='true'>-</td>
+        <td contenteditable='true'>-</td>
+        <td contenteditable='true'>-</td>
+        <td contenteditable='true'>-</td>
+        <td>-</td>
+  </tr>  
+  
+    <tr>
+        <td id="n">Leslie Owens</td>
+        <td id="n">1004</td>
+        <td contenteditable='true'>-</td>
+        <td contenteditable='true'>-</td>
+        <td contenteditable='true'>-</td>
+        <td contenteditable='true'>-</td>
+        <td contenteditable='true'>-</td>
+        <td>-</td>
+  </tr> 
+  
+    <tr>
+        <td id="n">Marilyn Evans</td>
+        <td id="n">1005</td>
+        <td contenteditable='true'>-</td>
+        <td contenteditable='true'>-</td>
+        <td contenteditable='true'>-</td>
+        <td contenteditable='true'>-</td>
+        <td contenteditable='true'>-</td>
+        <td>-</td>
+  </tr> 
+  
+    <tr>
+        <td id="n">Kevin Clark</td>
+        <td id="n">1006</td>
+        <td contenteditable='true'>-</td>
+        <td contenteditable='true'>-</td>
+        <td contenteditable='true'>-</td>
+        <td contenteditable='true'>-</td>
+        <td contenteditable='true'>-</td>
+        <td>-</td>
+  </tr> 
+  
+    <tr>
+        <td id="n">Jane Ostin</td>
+        <td id="n">1007</td>
+        <td contenteditable='true'>-</td>
+        <td contenteditable='true'>-</td>
+        <td contenteditable='true'>-</td>
+        <td contenteditable='true'>-</td>
+        <td contenteditable='true'>-</td>
+        <td>-</td>
+  </tr> 
+  
+    <tr>
+        <td id="n">Rupert O'Sullivan</td>
+        <td id="n">1008</td>
+        <td contenteditable='true'>-</td>
+        <td contenteditable='true'>-</td>
+        <td contenteditable='true'>-</td>
+        <td contenteditable='true'>-</td>
+        <td contenteditable='true'>-</td>
+        <td>-</td>
+  </tr> 
+  
+    <tr>
+        <td id="n">Hannah Jacobsen</td>
+        <td id="n">1009</td>
+        <td contenteditable='true'>-</td>
+        <td contenteditable='true'>-</td>
+        <td contenteditable='true'>-</td>
+        <td contenteditable='true'>-</td>
+        <td contenteditable='true'>-</td>
+        <td>-</td>
+  </tr> 
+  
+    <tr>
+        <td id="n">Ruby Northfolk</td>
+        <td id="n">1010</td>
+        <td contenteditable='true'>-</td>
+        <td contenteditable='true'>-</td>
+        <td contenteditable='true'>-</td>
+        <td contenteditable='true'>-</td>
+        <td contenteditable='true'>-</td>
+        <td>-</td>
+  </tr> 
+  
+</table>
+
+
+<button id="CalculateFinalGrade" class="button" >Calculate Final Grade</button>
+
+<table id = "AD", style="width:100%">
+  <tr>
+    <th> Name</th>
+    <th> ID</th> 
+    <th id="num">Assignments Due</th>
+  </tr>
+  
+  <tr>
+     <td id="n", contenteditable='false'>Cory Fox</td>
+     <td id="n", contenteditable='false'>1000</td>
+     <td id="b", contenteditable='false'>5</td>
+   </tr>
+   
+     <tr>
+     <td id="n", contenteditable='false'>Jack Hansen</td>
+     <td id="n", contenteditable='false'>1001</td>
+     <td id="b", contenteditable='false'>5</td>
+   </tr>
+   
+     <tr>
+     <td id="n", contenteditable='false'>Eve Jackson</td>
+     <td id="n", contenteditable='false'>1002</td>
+     <td id="c", contenteditable='false'>5</td>
+   </tr>
+   
+     <tr>
+     <td id="n", contenteditable='false'>John McGoran</td>
+     <td id="n", contenteditable='false'>1003</td>
+     <td id="d", contenteditable='false'>5</td>
+   </tr>
+   
+     <tr>
+     <td id="n", contenteditable='false'>Leslie Owens</td>
+     <td id="n", contenteditable='false'>1004</td>
+     <td id="e", contenteditable='false'>5</td>
+   </tr>
+   
+     <tr>
+     <td id="n", contenteditable='false'>Marilyn Evans</td>
+     <td id="n", contenteditable='false'>1005</td>
+     <td id="f", contenteditable='false'>5</td>
+   </tr>
+   
+     <tr>
+     <td id="n", contenteditable='false'>Kevin Clark</td>
+     <td id="n", contenteditable='false'>1006</td>
+     <td id="g", contenteditable='false'>5</td>
+   </tr>
+   
+     <tr>
+     <td id="n", contenteditable='false'>Jane Ostin</td>
+     <td id="n", contenteditable='false'>1007</td>
+     <td id="hh", contenteditable='false'>5</td>
+   </tr>
+   
+     <tr>
+     <td id="n", contenteditable='false'>Rupert O'Sullivan</td>
+     <td id="n", contenteditable='false'>1008</td>
+     <td id="i", contenteditable='false'>5</td>
+   </tr>
+   
+     <tr>
+     <td id="n", contenteditable='false'>Hannah Jacobsen</td>
+     <td id="n", contenteditable='false'>1009</td>
+     <td id="j", contenteditable='false'>5</td>
+   </tr>
+   
+        <tr>
+     <td id="n", contenteditable='false'>Ruby Northfolk</td>
+     <td id="n", contenteditable='false'>1010</td>
+     <td id="k", contenteditable='false'>5</td>
+   </tr>   
+   
+   <!--CSS-->
+   <style>
+   table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  font-family: "Tahoma", Geneva, sans-serif;
+}
+
+th#h, #hdd {
+  text-align: left;
+  background-color: skyBlue;
+}
+
+td {
+  text-align: right;
+}
+
+td#n {
+  text-align: left;
+}
+
+th#hd {
+  text-align: center;
+  background-color: gainsboro;
+}
+
+table#grades {
+  width: 100%;
+}
+
+.button {
+  background-color: #ADD8E6;
+  color: black;
+  padding: 0px 80px;
+  text-align: center;
+  font-size: 18px;
+  margin: 8px 300px;
+  -webkit-transition-duration: 0.4s;
+
+  /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+   </style>
+   
+   <!--Javascript-->
+   <script>
+   function finalGrade() 
+{
+  setInterval(function()
+  { 
+         var table1 = document.getElementById("Grades");
+         var table2 = document.getElementById("AD");
+         var rows1 = table1.rows;
+         var rows2 = table2.rows;
+
+         for (var i = 1; i < rows1.length; i++) 
+         {
+           var cells1 = rows1[i].cells;
+           var cells2 = rows2[i].cells;           
+           var sum = 0;
+           var numbers = 0;
+           var adue = 5;
+           		for (var j = 2; j< (cells1.length-1); j++) 
+              {
+                 var cell = cells1[j];
+                 var value = parseInt(cell.innerHTML);
+                 
+                 if(cell.innerHTML=="-")
+                 { 	
+                    value = 0;
+                 		rows1[i].cells[j].style.backgroundColor = "#ffff80";
+                 }
+                 else
+                 {
+                 		rows1[i].cells[j].style.backgroundColor = "white";
+                    adue = adue-1;
+                 }
+                 if(!isNaN(value))
+                 {  
+                    sum += value;
+                    numbers++;                    
+                 }
+                 else 
+                 {
+                 		 table1.rows[i].cells[j].innerHTML="-";                     
+                 }
+
+           	}
+           var average = sum / numbers;
+           rows1[i].cells[7].innerHTML = "<td>" + Math.round(average) + "%"+"</td>";
+           if (parseInt(rows1[i].cells[7].innerHTML) <40)
+           {
+               rows1[i].cells[7].style.backgroundColor = "#ff3333";
+               rows1[i].cells[7].style.color = "white";
+           }  
+            else 
+           {
+               rows1[i].cells[7].style.backgroundColor = "white";
+               rows1[i].cells[7].style.color = "black";
+           }
+           rows2[i].cells[2].innerHTML = "<td>" + Math.round(adue)+"</td>";
+         }
+   
+ }, 1);
+ }
+  
+  document.getElementById('CalculateFinalGrade').onclick = finalGrade;
+  document.getElementById('Grades').onkeydown = finalGrade; 
+  
+  
+   </scipt>
