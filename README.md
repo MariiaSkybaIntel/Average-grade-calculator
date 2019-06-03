@@ -1,12 +1,12 @@
 Author: mindskai27
 
-Date: February 28th, 2019
-
 Description: Average grade calculator. 
 
-Average is calculated automatically when input is received, however it can be also calculated using button below the table;
-If assignment is unsubmitted - change color cell to yellow;
-If average < 40% - change cell color to red;
-If any non-digit character is entered in editable cells - disregards input;
-The second table calculated information on the assignments due.
-JSFiddle link: https://jsfiddle.net/mind_skai/9wvm0tkf/
+Average grade is calculated automatically when a grade is given, however it can be also calculated using the button below the table.<br>
+If an assignment is unsubmitted - the color cell changes to yellow.<br>
+If average grade is < 40% the Final Grade cell color changes to red.<br>
+If any non-digit character is entered in editable cells the input is not reflected in the table.<br>
+The second table calculates how many assignments are due for each of the students.<br>
+JSFiddle link: https://jsfiddle.net/mind_skai/9wvm0tkf/<br>
+
+![Capture](https://github.com/mindskai27/JavaScript/blob/master/Capture.JPG)
